@@ -14,7 +14,12 @@ class ProductManager {
         }
 
         const newProduct = {
-            title, description, price, img, code, stock, id: ProductManager.id
+            title, 
+            description, 
+            price, 
+            img, 
+            code, 
+            stock,
         };
 
         if(!Object.values(newProduct).includes(undefined)){
@@ -45,10 +50,12 @@ const productos = new ProductManager();
 
 console.log(productos.getProduct());
 
-productos.addProduct("titutlo1, descripcion1", 2500, "img1", "asd123", 3);
-productos.addProduct("titutlo1, descripcion1", 2500, "img1", "asd456",);
+productos.addProduct("titutlo1", "descripcion1", 2500, "img1", "asd123", 3);
+productos.addProduct("titutlo2", "descripcion2", 2500, "img2", "asd456",);
 
-productos.addProduct("titutlo1, descripcion1", 2500, "img1", "asd456", 6);
+console.log(productos.getProduct());
+
+// productos.addProduct("titutlo3, descripcion3", 2500, "img3", "asd456", 8);
 
 productos.getProductById(4)
 
